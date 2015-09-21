@@ -59,7 +59,7 @@ p {
 pre, code {
 	font-family: $code-font;
 	font-weight: 400;
-	background-color: $background-alt-color;
+	background-color: $code-color;
 	border-radius: $brand-round;
 	padding: $half-spacing-unit / 2;
 	@include font-size($centi-size);

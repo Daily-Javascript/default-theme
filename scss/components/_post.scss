@@ -23,8 +23,8 @@
 	ul,
 	div,
 	pre {
-		width: $max-width - $base-spacing-unit * 2; // subtract .post padding
-		max-width: 100vw;
+		width: 100%;
+		max-width: $max-width - $base-spacing-unit * 2; // subtract .post padding;
 		@include media-query('palm') {
 			padding: 0 $half-spacing-unit;
 		}
@@ -35,8 +35,8 @@
 		position: relative;
 		left: calc(-45vw + 50%);
 		@include media-query($max-width) {
-			width: 100vw;
-			left: calc(-50vw + 50%);
+			width: calc(-50vw + 50%);
+			left: 100%;
 		}
 	}
 
@@ -58,7 +58,7 @@
 }
 
 .header-image {
-	width: 100vw;
+	width: 100%;
 	height: 78vh;
 	position: absolute;
 	top: 0;
@@ -66,7 +66,7 @@
 	background-color: $brand-dark;
 	background-size: cover;
 	background-position: 50% 50%;
-	z-index: 300;
+	z-index: 100;
 	filter: brightness(0.4);
 	@include layer;
 }
@@ -79,7 +79,7 @@
 	text-align: center;
 	color: #fff;
 	transform: translateY(-50%);
-	z-index: 400;
+	z-index: 100;
 	@include layer;
 	> h1,
 	> h3  {
