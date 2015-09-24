@@ -22,4 +22,4 @@ module.exports = React.createClass
                 _.map items, (link, i) ->
                     div {key: 'link-' + i, className: 'nav__link'},
                         NavigationLink {item: link}
-                div { className: 'logo' },
+                div { className: 'logo nav__link' },

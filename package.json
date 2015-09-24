@@ -1,7 +1,7 @@
 {
   "name": "js-blog-theme",
-  "version": "0.0.1",
-  "description": "Theme for js blog",
+  "version": "0.0.3",
+  "description": "Theme for daily javascript",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -31,6 +31,7 @@
     "coffee-loader": "^0.7.2",
     "node-sass": "^3.2.0",
     "react-coffee-elements": "^0.1.0",
+    "react-disqus-thread": "^0.2.2",
     "sass-loader": "^1.0.2"
   }
 }

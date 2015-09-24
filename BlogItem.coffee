@@ -3,6 +3,7 @@ MomentDisplay = React.createFactory require './MomentDisplay'
 Paths = require 'antwar-core/PathsMixin'
 Router = require 'react-router'
 config = require 'config'
+DisqusThread = React.createFactory require 'react-disqus-thread'
 
 { div, span, header, h1, a } = require 'react-coffee-elements'
 
@@ -37,3 +38,4 @@ module.exports = React.createClass
                 div {className: 'prevnext__bg', style: backgroundImage: "url(#{item.next.headerImage})"}
                 span className: 'prevnext__info', item.nextInfo || 'Next item'
                 a className: 'prevnext__link', href: "/#{item.next.url}", item.next.title
+      DisqusThread shortname: "daily-javascript", identifier:"disqus#{new Date}", title:"Comments for #{item.title}", url: item.url

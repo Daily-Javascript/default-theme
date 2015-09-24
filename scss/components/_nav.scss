@@ -49,6 +49,7 @@ $line-height: 3px;
         color: darken($action-color, 25%);
     }
     @include media-query(palm) {
+        &.logo { display: none; }
         text-align: center;
         width: 100%;
     }
@@ -65,8 +66,8 @@ $line-height: 3px;
     color: darken($action-color, 30%);
     padding: $half-spacing-unit 0;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 5px;
+    right: 5px;
     z-index: 100;
     background-color: #fff;
     &:before {
