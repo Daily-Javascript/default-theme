@@ -1,8 +1,7 @@
 .post {
 	align-self: center;
-	width: $max-width;
-	max-width: 100vw;
-	padding: 0 $base-spacing-unit;
+	max-width: $max-width;
+	max-width: 100%;
 	margin-bottom: $base-spacing-unit * 3;
 	border-bottom: 1px solid $code-color;
 	@include media-query('palm') {
@@ -27,7 +26,6 @@
 		width: 100%;
 		max-width: $max-width - $base-spacing-unit * 2; // subtract .post padding;
 		@include media-query('palm') {
-			padding: 0 $half-spacing-unit;
 		}
 	}
 

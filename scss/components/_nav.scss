@@ -1,5 +1,16 @@
 $line-height: 3px;
 
+nav {
+	display: flex;
+	flex-wrap: wrap;
+	flex-shrink:0;
+	flex-grow: 0;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	// align-items: flex-start;
+}
+
 .nav__wrapper {
     position: fixed;
     top: 0;
@@ -9,8 +20,8 @@ $line-height: 3px;
     z-index: 200;
 }
 .nav {
+    display: flex;
     flex-direction: row;
-    background: linear-gradient(to top, #fff 0%, #fff 35%, rgba(#fff, 0) 100%);
     background: $background-color;
     z-index: 5;
     width: 100%;
