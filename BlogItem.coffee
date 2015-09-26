@@ -26,7 +26,8 @@ module.exports = React.createClass
       if item.headerExtra? then div className: 'header-extra', dangerouslySetInnerHTML: __html: item.headerExtra
       if item.date then MomentDisplay className: 'post__moment', datetime: item.date
       if author then div className: 'post__author', "Authored by #{author}"
-      script {type: 'text/javascript', dangerouslySetInnerHTML: __html: "var disqus_shortname = 'daily-javascript';(function() {var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);})();"}
+      
+      div id: 'disqus_thread'
       if item.next or item.prev
         div className: 'prevnext',
           if item.prev

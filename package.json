@@ -1,6 +1,6 @@
 {
   "name": "js-blog-theme",
-  "version": "0.0.7",
+  "version": "0.0.10",
   "description": "Theme for daily javascript",
   "main": "index.js",
   "scripts": {
