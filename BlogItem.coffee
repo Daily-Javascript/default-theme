@@ -26,8 +26,6 @@ module.exports = React.createClass
       if item.headerExtra? then div className: 'header-extra', dangerouslySetInnerHTML: __html: item.headerExtra
       if item.date then MomentDisplay className: 'post__moment', datetime: item.date
       if author then div className: 'post__author', "Authored by #{author}"
-      
-      div id: 'disqus_thread'
       if item.next or item.prev
         div className: 'prevnext',
           if item.prev
