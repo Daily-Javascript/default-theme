@@ -5,7 +5,7 @@ Router = require 'react-router'
 config = require 'config'
 DisqusThread = React.createFactory require 'react-disqus-thread'
 
-{ div, span, header, h1, a } = require 'react-coffee-elements'
+{ div, span, header, h1, a, script } = require 'react-coffee-elements'
 
 module.exports = React.createClass
 
