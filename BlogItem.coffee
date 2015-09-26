@@ -26,6 +26,7 @@ module.exports = React.createClass
       if item.headerExtra? then div className: 'header-extra', dangerouslySetInnerHTML: __html: item.headerExtra
       if item.date then MomentDisplay className: 'post__moment', datetime: item.date
       if author then div className: 'post__author', "Authored by #{author}"
+      script {type: 'text/javascript', dangerouslySetInnerHTML: __html: "var disqus_shortname = 'daily-javascript';(function() {var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);})();"}
       if item.next or item.prev
         div className: 'prevnext',
           if item.prev
@@ -38,4 +39,3 @@ module.exports = React.createClass
                 div {className: 'prevnext__bg', style: backgroundImage: "url(#{item.next.headerImage})"}
                 span className: 'prevnext__info', item.nextInfo || 'Next item'
                 a className: 'prevnext__link', href: "/#{item.next.url}", item.next.title
-      DisqusThread shortname: "daily-javascript", identifier:"disqus#{new Date}", title:"Comments for #{item.title}", url: item.url

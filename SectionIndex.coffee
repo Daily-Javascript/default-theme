@@ -2,6 +2,7 @@ React = require('react')
 Router = require('react-router')
 Link = React.createFactory Router.Link
 MomentDisplay = React.createFactory require('./MomentDisplay')
+MdHelper = require('antwar-core/MdHelper')
 Paths = require('antwar-core/PathsMixin')
 SectionLink = React.createFactory require('antwar-core/SectionLink')
 config = require 'config'
@@ -22,7 +23,7 @@ module.exports = React.createClass
         div {className: 'grid'},
             h1 @getSectionTitle() or 'Blog posts'
             ul { className: 'post-list'},
-                _.map @getSectionItems(), (item) =>
+                _.map @getSectionItems().reverse(), (item) =>
                     li key: item.url,
                         h3 {className: 'post-list__heading'},
                             SectionLink
@@ -32,5 +33,4 @@ module.exports = React.createClass
                         if item.date
                             MomentDisplay
                                 datetime: item.date
-                        p {className: 'post-list__preview'},
-                            item.preview
+                        div {className: 'post-list__preview', dangerouslySetInnerHTML: {__html: MdHelper.render(item.preview) } },
